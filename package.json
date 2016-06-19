@@ -1,0 +1,21 @@
+{
+  "name": "Tessa-Serdar",
+  "version": "0.0.0",
+  "description": "Minesweeper",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "express": "^4.13.1"
+  },
+  "engines": {
+    "node": "5.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tessajeanserdar/minesweeper.git"
+  },
+  "author": "Tessa Serdar"
+}
+
