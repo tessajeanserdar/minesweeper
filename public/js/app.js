@@ -1,11 +1,11 @@
 var myApp = angular.module('myApp', ['BoardService']);
 myApp.controller('CalculatorController', function ($scope, Board) {
   $scope.initGame = function(mode){
-    $scope.mode = mode;
+    $scope.mode = mode || 'normal' ;
     $scope.status = "live";
     $scope.cheatEnabled = false;
     Board.clearBoard();
-    Board.initBoard(Board.gameMode[mode].size,Board.gameMode[mode].mines,mode);
+    Board.initBoard(Board.gameMode[$scope.mode].size,Board.gameMode[$scope.mode].mines,$scope.mode);
     $scope.rows = Board.rows;
   }
   $scope.visit = function (cell) {
