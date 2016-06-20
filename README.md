@@ -7,7 +7,7 @@ A recreation of the classic minesweeper game.
 To develop locally, just clone the repo down to your machine:
 
 ```
-git clone https://github.com/tessajeanserdar/UberRideStats.git
+git clone https://github.com/tessajeanserdar/minesweeper.git
 ```
 
 Next navigate to the root of the repository and run an npm install.  (if you don't have node yet you'll need to get node.js first, probably through brew).
