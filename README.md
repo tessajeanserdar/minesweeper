@@ -17,7 +17,7 @@ npm install
 ```
 ##How to play
 
-You can play online [here]('http://nameless-journey-16139.herokuapp.com/')
+You can play online [here](http://nameless-journey-16139.herokuapp.com/)
 
 ###Rules
 
