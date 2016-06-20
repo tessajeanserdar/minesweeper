@@ -14,7 +14,7 @@ Next navigate to the root of the repository and run an npm install.  (if you don
 
 ```
 npm install
-
+```
 ##How to play
 
 You can play online [here]('http://nameless-journey-16139.herokuapp.com/')
