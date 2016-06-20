@@ -21,5 +21,5 @@ You can play online [here](http://nameless-journey-16139.herokuapp.com/)
 
 ###Rules
 
-Uncover tiles with out uncovering mines! Once you think you've got it , hit the smiley face to see if you've won. The 
+Uncover tiles without uncovering mines! Once you think you've got it , hit the smiley face to see if you've won. The 
 closed eye icon can be used to cheat if you get too stuck.
