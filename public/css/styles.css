@@ -19,21 +19,6 @@ h1,h2,h3 {
     border-right: #eee solid 4px;
 }
 
-.gameTable td:hover {
-    background-color: #999;
-    cursor: pointer;
-}
-
-.gameTable td.selected {
-    background-color: #eee;
-    border: 4px solid #eee;
-}
-
-.gameTable td.selected:hover {
-    background-color: #eee;
-    cursor: default;
-}
-
 .gameTable td.mine {
     background-color: #f77;
     border: 4px solid #855;
@@ -51,28 +36,15 @@ h1,h2,h3 {
     color: #f00;
 }
 
-div.lost {
+div.lost, div.won {
     margin:0 auto;
     text-align: center;
     margin-top: 10px;
     width: 20%
 }
 
-div.won {
-    margin:0 auto;
-    text-align: center;
-    margin-top: 10px;
-    width: 20%
-}
 
-div.won:hover{
-    cursor: pointer
-}
-
-div.lost:hover{
-    cursor: pointer
-}
-div.show-mines  {
+div.show-mines, div.hide-mines, div.win-check {
     background-image: url("../assets/noun_96705.png");
     height: 50px;
     width: 30px;
@@ -82,43 +54,21 @@ div.show-mines  {
 
 }
 
-div.show-mines:hover{
-    cursor: pointer
+div.show-mines {
+    background-image: url("../assets/noun_96705.png");
 }
+
 div.hide-mines {
     background-image: url("../assets/noun_96481.png");
-    height: 50px;
-    width: 30px;
-    background-size: 100% auto;
-    background-repeat: no-repeat;
-    margin: 0 auto;
-}
-div.hide-mines:hover{
-    cursor: pointer
 }
 
 div.win-check {
     background-image: url("../assets/noun_11542.png");
-    height: 50px;
     width: 50px;
-    background-size: 100% auto;
-    background-repeat: no-repeat;
-    margin: 0 auto;
     margin-top: 20px;
 }
 
-div.win-check:hover{
+div.hide-mines:hover, div.show-mines:hover, div.lost:hover, div.won:hover, div.win-check:hover{
     cursor: pointer
 }
-.active{
-   border-bottom: #eee solid 4px;
-   border-left: #eee solid 4px;
-   border-top: #eee solid 4px; 
-   border-right: #eee solid 4px; 
-}
-
-.red {
-    background-color:red;
-}
-
 
