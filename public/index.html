@@ -1,44 +1,39 @@
 <!DOCTYPE html>
 <html ng-app="myApp">
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="css/styles.css">
-        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/cerulean/bootstrap.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
-        <script src="js/factory.js"></script>
-        <script src="js/app.js"></script>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/spacelab/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+    <script src="js/factory.js"></script>
+    <script src="js/app.js"></script>
     </head>
     <body class="main-container" ng-controller="CalculatorController">
-        <div class="container">
-          <h1> Welcome to Minesweeper!</h1>
-          <div ng-show="cheatEnabled" class="show-mines" ng-click="setCheatMode()"></div>
-          <div ng-show="!cheatEnabled" class="hide-mines" ng-click="setCheatMode()"></div>
-            <table class="gameTable">
-                <tr ng-repeat="row in rows">
-                    <td ng-repeat="cell in row" 
-                        ng-click="visit(cell)" 
-                        class="ng-class:{ 'selected' : cell.isRevealed}">
-                        <div class="cellNum" ng-show="cell.minesAdjacentCount > 0 && cell.isRevealed && !cell.isMine">
-                            {{ cell.minesAdjacentCount }}
-                        </div>
-                        <div  class="cellNum cellMine" ng-show="cell.isMine && cell.isRevealed  || cell.isMine && cheatEnabled">x
-                        </div>
-                    </td>
-                </tr>
-            </table>
-        </div>
-        <div class="lost alert alert-danger" 
-            ng-show="status === 'lost'">
-            <div ng-click="initGame()"> You lose! Click to play Again </div>
-        </div>
-        <div ng-click="validateBoard()" class="win-check">
-        </div> 
-        <div class="won alert alert-success" 
-           ng-show="status === 'won'"
-           ng-click="initGame()"
-           >
-           Congratulations! Click here for a new game.
-        </div> 
-    </body>
+      <div class="container">
+        <h1> Welcome to Minesweeper!</h1>
+        <div class="btn btn-info" ng-click="initGame('easy')"> easy</div>
+        <div class="btn btn-info"ng-click="initGame('medium')"> medium</div>
+        <div class="btn btn-info" ng-click="initGame('hard')"> hard</div>
+        <div ng-show="cheatEnabled" class="show-mines" ng-click="setCheatMode()"></div>
+        <div ng-show="!cheatEnabled" class="hide-mines" ng-click="setCheatMode()"></div>
+      </div>
+      <table class="gameTable">
+        <tr ng-repeat="row in rows">
+          <td ng-repeat="cell in row" ng-click="visit(cell)" class="ng-class:{ 'selected' : cell.isRevealed}">
+            <div class="cellNum" ng-show="cell.minesAdjacentCount > 0 && cell.isRevealed && !cell.isMine">
+              {{ cell.minesAdjacentCount }}
+            </div>
+            <div class="cellNum cellMine" ng-show="cell.isMine && cell.isRevealed  || cell.isMine && cheatEnabled">x</div>
+          </td>
+        </tr>
+      </table>
+      </div>
+      <div class="lost alert alert-danger" ng-show="status === 'lost'">
+        <div ng-click="initGame()"> You lose! Click to play Again </div>
+      </div>
+      <div ng-click="validateBoard()" class="win-check"></div> 
+      <div class="won alert alert-success" ng-show="status === 'won'" ng-click="initGame()">
+        You Win! Click here for a new game.
+      </body>
 </html>
